@@ -1,0 +1,10 @@
+<%- include('header', { title: "Home page"} );%>
+
+<body>
+    <h2>Ejs engine</h2>
+    <% if (name ) { %>
+        <h3> <%= name  %></h3>
+    <% } %>
+
+    <%- my_err %>
+</body>
