@@ -1,5 +1,5 @@
 ## # View Engine OR Template Engine
-To render a dymanic html file we need engine in express, we have install those separately. Many view engines are available there. Example: ejs, jade etc.
+To render a dymanic html file we need engine in express, we have install those separately. Many view engines are available there. Example: ejs, jade, pug etc.
 
 If we want to render a html file with the contents of it. We can use-
 ```js
