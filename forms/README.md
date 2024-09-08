@@ -31,3 +31,6 @@ We can validate submitted form in different ways
 
 Usage:
 * **express-validator**
+```
+npm install express-validator --save
+```

@@ -1,9 +1,8 @@
 {
-  "name": "forms",
+  "name": "database",
   "version": "1.0.0",
-  "description": "```npm\r npm init -y\r npm install express ejs --save\r npm install nodemon --save-dev\r ```",
+  "description": "```nodejs\r npm install express mysql dotenv --save\r npm install nodemon --save-dev\r ```",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.10",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "express-validator": "^7.2.0"
+    "mysql2": "^3.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
