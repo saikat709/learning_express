@@ -34,3 +34,8 @@ Usage:
 ```
 npm install express-validator --save
 ```
+
+
+#### Note:
+    get request send data as query. there is no body. but post have can have query parameter along with body if we define the action/post url with some query param value
+    e.g post request at /create?abc=28&&b=saikat , receing route will only be /create
