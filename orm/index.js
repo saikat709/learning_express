@@ -10,13 +10,23 @@ app.use(express.urlencoded({ extended: true }));
 
 
 sequelize.authenticate()
-    .then()
+    .then(msg =>{
+        console.log('Sequelize acquired the onnection.');   
+    })
     .catch(err=>{
-        console.log(err);
+        console.log('Could not connect: ', err.json);
+        process.exit(0);
+
     });
 
+sequelize.sync({force:true})
+    .then(msg=>{
+        console.log("All models synchrononized."); 
+    });
+
+    
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
-});
-
-sequelize.close();
+}).addListener('close',
+    sequelize.close
+);

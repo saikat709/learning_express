@@ -1,7 +1,9 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
+require('dotenv').config({
+    path: __dirname + '/.env'
+});
 
-console.log(process.env);
+console.log('nv:   ',  process.env.host);
 
 
 const sequelize = new Sequelize(
@@ -10,7 +12,14 @@ const sequelize = new Sequelize(
     process.env.password,
     {
         host: 'localhost',
-        dialect: 'mysql'
+        dialect: 'mysql',
+        pool: {
+            max: 5,
+            min: 0,
+            acquire: 30000,
+            idle: 10000
+         },
+
     }
 );
 
