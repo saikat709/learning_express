@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check file upload</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="form_title">Upload a file</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input class="form-field normal" name="title" id="title" placeholder="Write a name..." type="text">
+            <input class="form-field file"   name="file_field_name" id="file_field_name"  type="file">
+            <input class="form-field submit" name="submit" id="submit" type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
