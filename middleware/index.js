@@ -13,6 +13,13 @@ app.use((err, req, res, next)=>{
 });
 
 
+function authentication_needed(req, res, rext){
+    // check is looged in.
+    // if logged in: call next()
+    // else: res.redirect('/login)
+}
+
+
 // midleware for all routes
 app.use('*', (req, res, next)=>{
     // check
@@ -24,6 +31,8 @@ app.use('/', (req, res, next)=>{
     // check domething of the request. If no error, proceed to the url
     next();
 });
+
+app.use('/delete-article', authentication_needed);
 
 
 app.get('/', (req, res) => {

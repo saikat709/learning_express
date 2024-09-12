@@ -18,3 +18,8 @@ npm install express sequelize mysql2 --save
 npm install nodemon --save-dev
 ```
 
+```
+npm install --save-dev sequelize-cli
+
+```
+
