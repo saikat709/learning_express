@@ -7,8 +7,9 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('./public')); // .com/a.jpg
+app.use(express.static('./public/')); // .com/a.jpg
 //app.set('styles/', '/public/')
+app.set('/images', express.static('./uploads/'));
 
 
 app.set('view engine', 'ejs');

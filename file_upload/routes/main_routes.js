@@ -3,15 +3,16 @@ import multer from "multer";
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '../uploads/')
+    cb(null, './uploads/')
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-    cb(null, file.fieldname + '-' + uniqueSuffix)
+    const uniqueSuffix = Date.now() + '9';
+    cb(null, uniqueSuffix+'.jpg')
   }
 })
 
-const upload = multer({dest:'../uploads/'});
+const upload = multer({storage})//dest:'../uploads/'});
+
 
 const router = Router();
 
@@ -23,8 +24,8 @@ router.post('/',
     upload.single('file_field_name'),
     (req, res) => {
         console.log(req.path);
-        const filename = JSON.stringify(req.file);
-    res.send(`POST request to the homepage #####${filename}`);
+        const filename = req.file.filename;
+      res.render('success', {abc: filename});
 });
 
 export default router;
